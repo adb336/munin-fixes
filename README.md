@@ -5,10 +5,8 @@ iostat - this plugin has issues with the disk name "mmcblk0" and the partition v
 
 To fix it for raspbian OS put a comment character in from of
 
-<p>
- # if ($tmpnam =~ /\d+$/ and !$include_numbered) {
- #     # Special case for devices like cXdXpX,
- #     # like the cciss driver
- #     next unless $tmpnam =~ /\/c\d+d\d+$/
- # }
-</p>
+# if ($tmpnam =~ /\d+$/ and !$include_numbered) {
+#     # Special case for devices like cXdXpX,
+#     # like the cciss driver
+#     next unless $tmpnam =~ /\/c\d+d\d+$/
+# }
