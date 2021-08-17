@@ -5,7 +5,7 @@ iostat - this plugin has issues with the disk name "mmcblk0" and the partition v
 
 To fix it for raspbian OS put a comment character in from of
 
-...
+<p>
 sub fetch_detailed() {
     if (open(DETAILED, "/proc/diskstats") or
         open(DETAILED, "/proc/partitions")) {
@@ -15,7 +15,7 @@ sub fetch_detailed() {
                 my @fields = split(/\s+/, $3);
                 my $tmpnam = $2;
                 my $major  = $1;
-<b>                # if ($tmpnam =~ /\d+$/ and !$include_numbered) {
+             <b># if ($tmpnam =~ /\d+$/ and !$include_numbered) {
                 #     # Special case for devices like cXdXpX,
                 #     # like the cciss driver
                 #     next unless $tmpnam =~ /\/c\d+d\d+$/
@@ -47,4 +47,4 @@ sub fetch_detailed() {
         close (DETAILED);
     }
 }
-...
+</p>
