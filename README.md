@@ -16,10 +16,10 @@ sub fetch_detailed() {
                 my $tmpnam = $2;
                 my $major  = $1;
 -->             # if ($tmpnam =~ /\d+$/ and !$include_numbered) {
--->             #     # Special case for devices like cXdXpX,
--->             #     # like the cciss driver
--->             #     next unless $tmpnam =~ /\/c\d+d\d+$/
--->             # }
+                #     # Special case for devices like cXdXpX,
+                #     # like the cciss driver
+                #     next unless $tmpnam =~ /\/c\d+d\d+$/
+                # }
                 next unless grep { $_ } @fields;
 
                 $tmpnam =~ s/\/[[:alpha:]]+(\d+)/\/$1/g;
